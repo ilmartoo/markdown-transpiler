@@ -1,0 +1,47 @@
+INFORME ANÓNIMO
+
+TEMA ASIGNADO >>>>> TEMA 2
+TEMA ADICIONAL OPTATIVO >>>>> TEMA 3
+
+Compilar con la optimizacion como flag y con -O0 para que no 
+se optimice con otras ténicas.
+
+Es mejor programarlo a mano que poner un flag para visualizar la mejora.
+
+Mencionar en el texto cuantas veces se ha ejecutado el experimento.
+
+CONTAR TODO LO QUE SE HACE
+
+Información sobre el equipo que realiza la ejecución:
+- Tamaños cache (datos y tipos)
+- Tamaño RAM (datos)
+- Sistema Operativo
+
+En el caso de que se dependa de otros parametros a parte de N, realizar
+un estudio sobre ellos también.
+
+ITER debe ser un valor suficientemente grande para producir tiempos
+de ejecución del orden de segundos.
+
+Tener en cuenta que la cache está vacía al principio de las ejecuciones, por
+tanto el primer código siempre está penalizado por la carga en cache.
+- Es ideal que el primer lazo ya tenga los arrays en la cache
+	- Precargar la cache usando el lazo antes de empezar el lazo
+
+Mirar el código en ensamblador en las dos versiones de la compilación
+- Trozo del codigo en ensamblador del codigo sin mejorar y mejorado
+- Comparar los codigos asociados a los dos bucles y compararlos
+	- Tabla con dos columnas: una para cada código.
+	
+INCLUIR CÓDIGOS EN LA ENTREGA
+
+revisar el codigo ensamblador
+	diagramas de flujo
+	comparar bloques básicos
+	contar cuantas instrucciones acceden a memoria
+	
+ESTUDIO PREVIO DE N
+para valores de N pequeños
+para valores de N grandes
+
+definir matrices dinamicas

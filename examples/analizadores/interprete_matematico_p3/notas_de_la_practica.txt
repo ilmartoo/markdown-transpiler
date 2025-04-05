@@ -1,0 +1,158 @@
+----------------------------------------------------
+-------------- INTÉRPRETE DE COMANDOS --------------
+----------------------------------------------------
+
+ Práctica de desarrollo de un interprete de comandos
+ orientado a una consola matemática.
+ 
+ Debe tener las funcionalidades obligatorias y puede
+ incluir funcionalidades opcionales.
+ 
+ 
+ 1. FUNCIONALIDAD GENERAL
+ 
+   Aparece un cursor al iniciar, se permite la
+   introducción de comandos y devuelve el resultado:
+   #----------#
+   | > 2 + 3  |
+   | 5        |
+   |          |
+   | > a = 1  |
+   | 1        |
+   #----------#
+
+   
+   Debe contar con las siguientes operaciones y 
+   funcionalidades:
+	- Operaciones (> 2 + 3)
+	    · suma
+	    · resta
+	    · más...
+		
+	- Asignaciones (> a = 1)
+	   
+	- Funciones trigonométricas (> 5 * sin(7.34))
+  	    · sin
+	    · cos
+	    · más...
+		  
+	- Funciones de la librería matemática
+		
+	- Constantes (Podria concebirse de ser constante
+	  todo lo que se defina en mayusculas)
+		· PI
+		· E
+
+
+   Tratar todos los datos como FLOAT.
+    - Debe permitirse la notación científica
+	
+	
+   Necesario modificar la tabla de símbolos para
+   ajustarla a los nuevos requerimientos:
+    - Añadir un campo de valor (implementarlo como
+	  una union de C)
+	- Posible campo de tipo
+   
+
+ 2. FUNCIONES PROPIAS DEL INTÉRPRETE
+ 
+   HELP - Comando de ayuda
+	- Aporta ayuda de:
+		· Funciones
+		· Constantes
+		· Comandos
+
+
+   LOAD - Carga de ficheros de comandos
+    - Se interpretan todas las funciones del archivo
+	  por orden descencente
+	- Archivo como argumento
+     
+	 
+   WORKSPACE - Variables de la sesión
+    - Muestra todas las variables de la sesión
+	- Puede mostrar también las librerias añadidas
+	  (opcional)
+
+
+	CLEAN - Borra variables
+    - Sin argumentos borra todas las variables de la
+	  sesión y librerias importadas
+	- Puede invocarse con una variable y eliminar su
+	  definición (opcional)
+     
+
+   ECHO - Impresión por pantalla
+    [Varias opciones]
+	- Puede invocarse como comando e imprimir el
+	  resultado de lo que contenga
+	  - O -
+	- Puede ponerse un punto y coma al final de la
+	  instrucción para indicar que no se quiere
+	  imprimir el resultado
+      #----------#
+      | > 2 + 3; |
+      |          |
+      | > 2 + 3  |
+      | 5        |
+      #----------#
+	  
+
+   EXIT - Salir del interprete
+
+
+ 3. MANEJO DE ERRORES
+ 
+  Debe implementarse un sistema de manejo de errores
+  que permita comunicar correctamente los errores
+  encontrados y tratarlos correctamente. Algunos
+  errores pueden ser:
+   - División por 0
+   - Fichero inexistente (LOAD)
+   - Fallo de variables (uso sin definir)
+   - Fallo de parentesis (no se cierrra o no se 
+     abre y es ambiguo)
+   - Errores de operaciones
+   - Valor no reconocido
+   - más...
+
+   
+ A. FUNCIONALIDADES OPCIONALES 
+ 
+   [Cuentan a mayores para la nota]
+   
+   LIBRERIAS - Inclusión dinámica de librerías
+    - Incluir por defecto la librería matemática
+	  (librería math.h)
+	- Permitir la inclusión dinámica de otras
+	  librerías mediante la librería dlfcn:
+	    · dlopen()
+		· dlclose()
+		· dlsym()
+		· dlerror()
+	- Implica la comprobación de no solapamiento de
+	  nombres de variables y funciones cuando se
+	  realiza la inclusión dinámica
+	- Posible anotar las librerías ya incluidas para
+	  no realizar dobles inclusiones
+	  
+	  
+	ONE-LINERS - Multiples comandos en una línea
+	 - Permitir, mediante el ";", múltiples
+	   instrucciones en una sola línea.
+	 - Imprimir solo el último resultado
+	 - Posible multiple linea mediante "\n" a la vez
+	   que el ";"
+	   
+	   
+	HISTÓRICO - Historial de comandos
+	 - Posible implementación de una función que
+	   imprima los comandos escritos en la sesión
+	 - Guardado en un documento (lento) o en memoria
+	   (rápido)
+	 - Cada vez que se inserte Enter se tiene que 
+	   abrir el archivo para guardar la linea en
+	   caso de hacerlo por fichero
+	 - Posible navegación entre los comandos
+	   mediante las flechas

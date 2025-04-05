@@ -1,0 +1,6 @@
+num = 9
+num2 = 8 + 9
+sin(4 * PI)
+num3 = num ^ 9
+CONST = num + num2
+print(CONST / num3)
