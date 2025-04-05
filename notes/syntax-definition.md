@@ -172,6 +172,7 @@ Displays as a normal link, but splits the link in two
 [hobbit-hole] [1]
 ```
 ### Second part
+
 ```
 [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle
 [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"
@@ -181,9 +182,23 @@ Displays as a normal link, but splits the link in two
 [1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> 'Hobbit lifestyles'
 [1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> (Hobbit lifestyles)
 ```
-
 ## Tables
 
+```
+| Syntax | Description |
+| --- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+```
+### Alignment
+To align columns, the header column must have a `:` in the side you want to align to, or in both if centered
+
+```
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+```
 
 ## Footnotes
 The footnote id must not contain spaces or tabs
