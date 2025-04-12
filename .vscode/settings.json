@@ -1,0 +1,15 @@
+{
+  "files.associations": {
+    "custom_stack.h": "c",
+    "definitions.h": "c",
+    "tokens.h": "c",
+    "deque": "c",
+    "initializer_list": "c",
+    "stack": "c",
+    "type_traits": "c",
+    "xmemory": "c",
+    "xtr1common": "c",
+    "xutility": "c",
+    "utility": "c"
+  }
+}

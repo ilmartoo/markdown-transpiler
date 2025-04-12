@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "types.h"
+#include <stdio.h>
 
 typedef struct InputGuard
 {
